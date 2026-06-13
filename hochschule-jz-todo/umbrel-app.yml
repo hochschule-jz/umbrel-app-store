@@ -4,7 +4,7 @@ name: To Do
 tagline: A calm, modern task manager
 icon: https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 category: Productivity
-version: "1.0.0"
+version: "1.0.1"
 port: 8742
 description: >-
   To Do is a self-hosted, single-user task manager with a calm "matcha" theme.
@@ -23,8 +23,8 @@ support: https://github.com/hochschule-jz/todo/issues
 gallery:
   - https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 releaseNotes: >-
-  Initial release — task lists & groups, My Day / Important / Planned smart
-  lists, steps, notes, reminders, due dates, and PostgreSQL persistence.
+  Opens straight to your tasks over Tailscale (no extra login). The Completed
+  section now remembers whether you collapsed it, per device.
 dependencies: []
 path: ""
 defaultUsername: ""
