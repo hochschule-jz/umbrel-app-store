@@ -13,7 +13,7 @@ services:
 
   # The app: Node serves the REST API + the built React/PWA frontend.
   server:
-    image: ghcr.io/hochschule-jz/todo:1.0.1
+    image: ghcr.io/hochschule-jz/todo:1.0.2
     restart: on-failure
     init: true
     stop_grace_period: 1m
