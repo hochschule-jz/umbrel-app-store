@@ -1,0 +1,31 @@
+manifestVersion: 1
+id: hochschule-jz-todo
+name: To Do
+tagline: A calm, modern task manager
+icon: https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
+category: Productivity
+version: "1.0.0"
+port: 8742
+description: >-
+  To Do is a self-hosted, single-user task manager with a calm "matcha" theme.
+
+
+  Organise tasks into lists and groups, flag what's important, plan your day,
+  add steps, notes, reminders and due dates. All data is stored in a dedicated
+  PostgreSQL database on your Umbrel, and the app installs as a PWA on iOS,
+  Android, macOS and Windows over your private Tailscale network.
+developer: Julian Zankl
+website: https://github.com/hochschule-jz/todo
+submitter: Julian Zankl
+submission: https://github.com/hochschule-jz/todo
+repo: https://github.com/hochschule-jz/todo
+support: https://github.com/hochschule-jz/todo/issues
+gallery:
+  - https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
+releaseNotes: >-
+  Initial release — task lists & groups, My Day / Important / Planned smart
+  lists, steps, notes, reminders, due dates, and PostgreSQL persistence.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

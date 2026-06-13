@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+  # Umbrel injects this proxy; it exposes the app on the dashboard `port`
+  # (8742) and forwards to the Node server container on its internal port.
+  app_proxy:
+    environment:
+      APP_HOST: hochschule-jz-todo_server_1
+      APP_PORT: 3001
+
+  # The app: Node serves the REST API + the built React/PWA frontend.
+  server:
+    image: ghcr.io/hochschule-jz/todo:1.0.0
+    restart: on-failure
+    init: true
+    stop_grace_period: 1m
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      # Reaches Postgres by its full Umbrel container name.
+      DATABASE_URL: postgres://todo:todo@hochschule-jz-todo_db_1:5432/todo
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Dedicated PostgreSQL. Data is bind-mounted into the app's data dir, which
+  # lives on the Pi's NVMe SSD — so it survives restarts, updates and reinstalls.
+  db:
+    image: postgres:16-alpine
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      POSTGRES_USER: todo
+      POSTGRES_PASSWORD: todo
+      POSTGRES_DB: todo
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U todo -d todo']
+      interval: 5s
+      timeout: 5s
+      retries: 10

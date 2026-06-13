@@ -1,0 +1,4 @@
+# Identifies this repository as an Umbrel Community App Store.
+# `id` is the unique prefix every app in this store must start with.
+id: hochschule-jz
+name: Julian's Apps
