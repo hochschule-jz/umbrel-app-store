@@ -4,7 +4,7 @@ name: To Do
 tagline: A calm, modern task manager
 icon: https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 category: Productivity
-version: "1.0.3"
+version: "1.0.4"
 port: 8742
 description: >-
   To Do is a self-hosted, single-user task manager with a calm "matcha" theme.
@@ -23,28 +23,26 @@ support: https://github.com/hochschule-jz/todo/issues
 gallery:
   - https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 releaseNotes: >-
-  New features:
+  This release makes Web Push reminder notifications more reliable:
 
 
-  • Settings now sync across all your devices — your profile and appearance
-  (accent, density, sidebar width, corner radius, sound) live on the server.
+  • New "Send test" button in Settings to instantly check that push
+  notifications are working on this device.
 
 
-  • Profile name, email and avatar, with a built-in image cropper.
+  • Clearer guidance when push isn't available — it now tells you exactly why
+  (insecure connection, or that on iOS the app must be added to the Home Screen).
 
 
-  • Search your tasks and lists right from the sidebar.
+  • Reminder notifications now include the task's list name, and re-alert when a
+  reminder changes.
 
 
-  • Reminder notifications via Web Push — get notified when a reminder is due,
-  even with the app closed, on your installed PWA. Enable it from Settings.
+  • More reliable delivery — the app automatically re-subscribes if your browser
+  rotates its push subscription, and prunes stale subscriptions.
 
 
-  • Various mobile layout fixes.
-
-
-  New database tables are created automatically on first start; your existing
-  tasks are untouched.
+  This update is code-only; your existing tasks and data are untouched.
 dependencies: []
 path: ""
 defaultUsername: ""
