@@ -4,7 +4,7 @@ name: To Do
 tagline: A calm, modern task manager
 icon: https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 category: Productivity
-version: "1.0.4"
+version: "1.0.5"
 port: 8742
 description: >-
   To Do is a self-hosted, single-user task manager with a calm "matcha" theme.
@@ -23,23 +23,24 @@ support: https://github.com/hochschule-jz/todo/issues
 gallery:
   - https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 releaseNotes: >-
-  This release makes Web Push reminder notifications more reliable:
+  This release makes the app much nicer to use on iPhone and other touch
+  devices, with a focus on accessibility:
 
 
-  • New "Send test" button in Settings to instantly check that push
-  notifications are working on this device.
+  • Swipe-to-delete now works with a finger — lists, groups and steps can be
+  removed on iPhone and iPad (previously this only worked with a trackpad).
 
 
-  • Clearer guidance when push isn't available — it now tells you exactly why
-  (insecure connection, or that on iOS the app must be added to the Home Screen).
+  • Larger, easier-to-hit tap targets throughout — checkboxes, header buttons
+  and the calendar now meet accessibility size guidance.
 
 
-  • Reminder notifications now include the task's list name, and re-alert when a
-  reminder changes.
+  • The importance star and the in-group "add list" button are always visible
+  on touch, and every tap now gives clear visual feedback.
 
 
-  • More reliable delivery — the app automatically re-subscribes if your browser
-  rotates its push subscription, and prunes stale subscriptions.
+  • Roomier spacing and bigger text on phones, the task detail view fills the
+  screen, and its actions clear the iPhone home-bar.
 
 
   This update is code-only; your existing tasks and data are untouched.
