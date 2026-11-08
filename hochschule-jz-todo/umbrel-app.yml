@@ -4,7 +4,7 @@ name: To Do
 tagline: A calm, modern task manager
 icon: https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 category: Productivity
-version: "2.0.1"
+version: "2.0.2"
 port: 8742
 description: >-
   To Do is a self-hosted, single-user task manager with a calm "matcha" theme.
@@ -23,6 +23,10 @@ support: https://github.com/hochschule-jz/todo/issues
 gallery:
   - https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-todo/icon.png
 releaseNotes: >-
+  2.0.2 fixes a crash on start when the app is opened over http, as on
+  Umbrel via Tailscale.
+
+
   Version 2 is a rebuild that looks and works like Microsoft To Do: like the
   web app on the desktop and like the iOS app on the phone, with colour
   schemes and three densities to choose from.
