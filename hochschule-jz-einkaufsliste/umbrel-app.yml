@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.6"
+version: "0.1.7"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -28,10 +28,10 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - Die App holt sich neue Versionen von selbst: Beim Öffnen sucht sie danach und lädt einmal neu.
+  - Wer einen Artikel hinzugefügt hat, steht jetzt gut sichtbar auf der Kachel: ein Zeichen in der Farbe des Mitglieds mit dem Anfangsbuchstaben, statt des kleinen Punkts.
 
-  - Über eine https-Adresse startet die App auch ohne Verbindung, mit den Listen, wie sie zuletzt waren. Wie das eingerichtet wird, steht im README des App Stores.
+  - Dasselbe Zeichen steht in den Artikeldetails vor „Hinzugefügt von …“.
 
-  - Der Hinweis zum Home-Bildschirm erscheint nur noch dort, wo die App ohne Internet funktionieren kann.
+  - Die Farbe „Petrol“ ist im hellen Design etwas dunkler, damit der Buchstabe gut lesbar ist.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
