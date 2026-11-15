@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.7"
+version: "0.1.8"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -28,10 +28,10 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - Wer einen Artikel hinzugefügt hat, steht jetzt gut sichtbar auf der Kachel: ein Zeichen in der Farbe des Mitglieds mit dem Anfangsbuchstaben, statt des kleinen Punkts.
+  - „Foto hinzufügen“ öffnet jetzt direkt die Kamera für ein neues Foto.
 
-  - Dasselbe Zeichen steht in den Artikeldetails vor „Hinzugefügt von …“.
+  - Danach legst du den Ausschnitt fest: Das Foto lässt sich in einem quadratischen Rahmen verschieben und mit zwei Fingern vergrößern. Gespeichert wird genau dieser Ausschnitt.
 
-  - Die Farbe „Petrol“ ist im hellen Design etwas dunkler, damit der Buchstabe gut lesbar ist.
+  - Passt die Aufnahme nicht, geht es mit „Neu aufnehmen“ zurück zur Kamera.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
