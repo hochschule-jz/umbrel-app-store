@@ -26,18 +26,52 @@ umbrelOS pulls its image from `ghcr.io/hochschule-jz/einkaufsliste`; the app's s
 Raise `version` in `server/package.json` and `web/package.json`, run `release.sh` again, write what is
 new into `releaseNotes` in `umbrel-app.yml`, and push this repository. umbrelOS then offers the update.
 
-## Using it without a connection (https)
+## Using it from anywhere, also without a connection (https)
 
-Over `http://umbrel.local:8642` the app needs the server for every start. To open it in the shop without
-a connection, it has to be installed from an https address; with Tailscale on the Umbrel that is Tailscale Serve:
+Over `http://umbrel.local:8642` the app only works at home and needs the server for every start. With an
+https address it can be installed on the phone, starts without a connection, and the Siri shortcut
+accepts it. The Umbrel is reached through Tailscale, so nothing is opened to the internet.
 
-1. In the Tailscale admin console, on the DNS page, turn on MagicDNS and „HTTPS Certificates“. This puts the
-   Umbrel's machine name and the tailnet name into a public certificate log; access stays limited to your devices.
-2. On the Umbrel over SSH, find the Tailscale container and turn on Serve for the app:
+There are two ways. Both need Tailscale on the Umbrel and on every device.
 
-   ```bash
-   sudo docker ps --format '{{.Names}}' | grep -i tailscale
+### A: your own domain (works on every phone)
+
+A name under your own domain is in the public DNS, so it also resolves on phones whose DNS is fixed by a
+company profile, where Tailscale's own names do not. The name points at the Umbrel's Tailscale address,
+which only your own devices can reach. Below, `einkauf.example.eu` stands for your name and `100.x.y.z`
+for the Umbrel's Tailscale address (shown in the Tailscale app).
+
+1. **DNS record.** At the domain's DNS provider add an `A` record for the name with the value `100.x.y.z`.
+2. **Check before anything else.** On each phone, with Tailscale on, open `http://einkauf.example.eu:8642`.
+   The sign-in page must load. If a phone says the server cannot be found, its DNS refuses private
+   addresses and this way does not work for it. (Some endings, like `.dev` or `.app`, only allow https;
+   there a certificate warning at `https://…:8642` shows the same thing.)
+3. **API key.** Create a key at the DNS provider that may edit DNS records for this domain only. It lets
+   the proxy prove to Let's Encrypt that the domain is yours; the Umbrel itself is not reachable for that.
+4. **Proxy.** Install „Nginx Proxy Manager“ from the Umbrel App Store. On Umbrel it serves https on port
+   `40443`. Ignore its note about port forwarding on the router; that is for public access.
+5. **Certificate.** In Nginx Proxy Manager: Certificates › Add › „Let's Encrypt via DNS“. Enter the name,
+   choose your DNS provider, put the key into the credentials box in place of the placeholders, and set
+   120 propagation seconds. It renews by itself.
+6. **Proxy host.** Hosts › Proxy Hosts › Add: the name, scheme `http`, forward to `100.x.y.z` port `8642`,
+   „Block Common Exploits“ on. On the SSL tab choose the certificate and turn on „Force SSL“ and
+   „HTTP/2 Support“. Behind the gear icon, add this line, or changes from other devices arrive late:
+
    ```
+   proxy_buffering off;
+   ```
+
+7. **Phones.** Open `https://einkauf.example.eu:40443`, sign in, add it to the Home Screen and delete an
+   older icon. In the Siri shortcut use `https://einkauf.example.eu:40443/api/siri`. Turn on
+   „VPN On Demand“ in the Tailscale app, so the phone stays connected away from home.
+
+### B: Tailscale Serve (no domain needed)
+
+Simpler, but the address is a Tailscale name, which does not resolve on phones with a DNS profile.
+
+1. In the Tailscale admin console, on the DNS page, turn on MagicDNS and „HTTPS Certificates“. This puts
+   the Umbrel's machine name and the tailnet name into a public certificate log.
+2. On the Umbrel, in a terminal:
 
    ```bash
    sudo docker exec tailscale_web_1 tailscale serve --bg --https=8443 http://localhost:8642
@@ -47,18 +81,22 @@ a connection, it has to be installed from an https address; with Tailscale on th
    sudo docker exec tailscale_web_1 tailscale serve status
    ```
 
-   The last command shows the address, like `https://umbrel.tail1234.ts.net:8443`.
-3. On each iPhone, with Tailscale on: open that address in Safari, sign in, add it to the Home Screen and delete
-   the old icon. Replace the address in the Siri shortcut (Einstellungen shows the new one).
-4. Check: open the app from the new icon, switch to flight mode, close the app and open it again. The lists
-   appear with the „Offline“ row; changes are sent once the Umbrel is in reach again.
+   The second command shows the address, like `https://umbrel.tail1234.ts.net:8443`. If the container
+   has another name, `sudo docker ps --format '{{.Names}}' | grep -i tailscale` shows it.
+3. Use that address on the phones as in step 7 above.
 
-The https address only answers while Tailscale is on, at home too. With Tailscale off the app works from
-its copy on the phone and sends the changes later. Updates arrive by themselves: the app fetches a new
-version when it is opened and reloads once.
+To undo: `sudo docker exec tailscale_web_1 tailscale serve --https=8443 off`. If the address stops
+answering after an update of Umbrel's Tailscale app, run the `serve` command again.
 
-To undo: `sudo docker exec tailscale_web_1 tailscale serve --https=8443 off`. If the address stops answering
-after an update of Umbrel's Tailscale app, run the `serve` command again.
+### Either way
+
+- Check: open the app from the new icon, switch to flight mode, close the app and open it again. The lists
+  appear with the „Offline“ row; changes are sent once the Umbrel is in reach again.
+- The address only answers while Tailscale is on, at home too. With Tailscale off the app works from its
+  copy on the phone and sends the changes later.
+- A new address means signing in again on each device.
+- Updates arrive by themselves: the app fetches a new version when it is opened and reloads once.
+- Do not use Tailscale Funnel or a port forward on the router: both put the app on the open internet.
 
 ## Notes
 
