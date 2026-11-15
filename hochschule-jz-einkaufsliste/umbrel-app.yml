@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.8"
+version: "0.1.9"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -28,10 +28,10 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - „Foto hinzufügen“ öffnet jetzt direkt die Kamera für ein neues Foto.
+  - Ein Foto lässt sich jetzt gleich beim Hinzufügen eines Artikels aufnehmen.
 
-  - Danach legst du den Ausschnitt fest: Das Foto lässt sich in einem quadratischen Rahmen verschieben und mit zwei Fingern vergrößern. Gespeichert wird genau dieser Ausschnitt.
+  - In den Artikeldetails verschiebst du einen Artikel mit einem Tipp in eine andere Liste: unter „Verschieben nach“ steht jede andere Liste.
 
-  - Passt die Aufnahme nicht, geht es mit „Neu aufnehmen“ zurück zur Kamera.
+  - „Erledigt“ und „Von der Liste entfernen“ gibt es in den Artikeldetails nicht mehr. Abgehakt wird wie bisher mit einem Tipp auf die Kachel.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
