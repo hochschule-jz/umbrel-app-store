@@ -1,0 +1,37 @@
+manifestVersion: 1
+id: hochschule-jz-einkaufsliste
+category: files
+name: Einkaufsliste
+version: "0.1.6"
+tagline: Die gemeinsame Einkaufsliste für euren Haushalt
+description: >-
+  Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
+  alle Listen werden geteilt und sofort auf allen Geräten aktualisiert.
+
+
+  Am iPhone über „Teilen“ zum Home-Bildschirm hinzufügen. Beim ersten Start legst du das erste
+  Konto an; weitere Mitglieder fügst du in den Einstellungen hinzu. Artikel lassen sich auch
+  per Siri-Kurzbefehl diktieren.
+developer: Privat
+website: https://github.com/hochschule-jz/umbrel-app-store
+dependencies: []
+repo: https://github.com/hochschule-jz/umbrel-app-store
+support: https://github.com/hochschule-jz/umbrel-app-store/issues
+# The address is http://umbrel.local:8642 (or your Tailscale name). Change it if another app uses this port.
+port: 8642
+icon: https://raw.githubusercontent.com/hochschule-jz/umbrel-app-store/main/hochschule-jz-einkaufsliste/icon.png
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: >-
+  Neu in dieser Version:
+
+
+  - Die App holt sich neue Versionen von selbst: Beim Öffnen sucht sie danach und lädt einmal neu.
+
+  - Über eine https-Adresse startet die App auch ohne Verbindung, mit den Listen, wie sie zuletzt waren. Wie das eingerichtet wird, steht im README des App Stores.
+
+  - Der Hinweis zum Home-Bildschirm erscheint nur noch dort, wo die App ohne Internet funktionieren kann.
+submitter: Privat
+submission: https://github.com/hochschule-jz/umbrel-app-store

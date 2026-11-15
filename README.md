@@ -5,6 +5,7 @@ A custom [Umbrel](https://umbrel.com) community app store.
 ## Apps
 
 - **To Do** (`hochschule-jz-todo`) — a calm, self-hosted, single-user task manager backed by PostgreSQL.
+- **Einkaufsliste** (`hochschule-jz-einkaufsliste`) — the shared shopping list for one household, with its own sign-in. See [its notes](hochschule-jz-einkaufsliste/README.md).
 
 ## Add this store to your Umbrel
 
@@ -13,11 +14,11 @@ A custom [Umbrel](https://umbrel.com) community app store.
    ```
    https://github.com/hochschule-jz/umbrel-app-store
    ```
-3. Open **Julian's Apps** and install **To Do**.
+3. Open **Julian's Apps** and install the app you want.
 
-> umbrelOS pulls the prebuilt image from `ghcr.io/hochschule-jz/todo`, then starts the app + its PostgreSQL container. PostgreSQL data is stored under the app's data directory on the Pi's NVMe SSD, so it survives restarts and updates.
+> For To Do, umbrelOS pulls the prebuilt image from `ghcr.io/hochschule-jz/todo`, then starts the app + its PostgreSQL container. PostgreSQL data is stored under the app's data directory on the Pi's NVMe SSD, so it survives restarts and updates.
 
-## Prerequisites (one-time, before first install)
+## To Do: prerequisites (one-time, before first install)
 
 The app image must exist and be publicly pullable:
 
@@ -30,7 +31,7 @@ The app image must exist and be publicly pullable:
 2. Make the package **public** so the Pi can pull it without credentials:
    GitHub → your profile → **Packages** → `todo` → **Package settings** → **Change visibility** → *Public*.
 
-## Releasing a new version
+## To Do: releasing a new version
 
 1. Bump `version` in `hochschule-jz-todo/umbrel-app.yml` and the image tag in
    `hochschule-jz-todo/docker-compose.yml` (e.g. `:1.1.0`).
