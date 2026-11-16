@@ -12,7 +12,7 @@ services:
 
   web:
     # Set by release.sh: the pushed image, pinned by digest.
-    image: ghcr.io/hochschule-jz/einkaufsliste:0.1.11@sha256:7bc73efc3743b85f1d664c5a38f9605a240df467b5440036be4796f6ad73fd0b
+    image: ghcr.io/hochschule-jz/einkaufsliste:0.1.12@sha256:866d165d8753219314902857e1731053f001c423663709bbf4456409d38278e9
     user: "1000:1000"
     init: true
     restart: on-failure
