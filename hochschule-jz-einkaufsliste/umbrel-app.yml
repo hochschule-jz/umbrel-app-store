@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.15"
+version: "0.1.16"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -28,10 +28,10 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - Die Liste hat ein neues Aussehen: breite Karten statt hoher Kacheln. Das Symbol steht links, Name und Notiz daneben, zwei Karten pro Zeile. So passen mehr Artikel auf den Bildschirm, und der Name steht im Vordergrund.
+  - Die Karten in der Liste sind ruhiger: weiß mit feinem Rand, nur das Feld hinter dem Symbol trägt noch die Farbe der Kategorie. Die Liste wirkt weniger bunt, und die Abteilung bleibt trotzdem auf einen Blick erkennbar, auch wenn nach Markt sortiert ist.
+
+  - Eine längere Notiz wird nicht mehr abgeschnitten, sie bricht in eine zweite Zeile um.
 
   - Dieselben Karten gibt es in der Suche, im Katalog und unter „Zuletzt verwendet“.
-
-  - Über dem Listennamen ist etwas mehr Platz.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
