@@ -28,10 +28,10 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - Die Karten in der Liste sind ruhiger: weiß mit feinem Rand, nur das Feld hinter dem Symbol trägt noch die Farbe der Kategorie. Die Liste wirkt weniger bunt, und die Abteilung bleibt trotzdem auf einen Blick erkennbar, auch wenn nach Markt sortiert ist.
+  - Jedes Foto lässt sich nach dem Aufnehmen zuschneiden: An den Ecken und Kanten des Rahmens ziehen, bis nur mehr das Wichtige drin ist, dann „Verwenden“. Der Rahmen kann jede Form haben, Fotos müssen nicht mehr quadratisch sein.
 
-  - Eine längere Notiz wird nicht mehr abgeschnitten, sie bricht in eine zweite Zeile um.
+  - Die Kamera in der App zeigt das ganze Bild statt eines quadratischen Ausschnitts.
 
-  - Dieselben Karten gibt es in der Suche, im Katalog und unter „Zuletzt verwendet“.
+  - In den Details ist das Foto immer ganz zu sehen.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
