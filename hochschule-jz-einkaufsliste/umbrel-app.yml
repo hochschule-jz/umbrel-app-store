@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.14"
+version: "0.1.15"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -25,17 +25,13 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Neu in dieser Version, lauter kleine Bewegungen:
+  Neu in dieser Version:
 
 
-  - Wird ein Foto gelöscht, klappt es weich weg, statt zu verschwinden.
+  - Die Liste hat ein neues Aussehen: breite Karten statt hoher Kacheln. Das Symbol steht links, Name und Notiz daneben, zwei Karten pro Zeile. So passen mehr Artikel auf den Bildschirm, und der Name steht im Vordergrund.
 
-  - Ein verschobener Artikel verlässt die Liste sichtbar, wie beim Abhaken.
+  - Dieselben Karten gibt es in der Suche, im Katalog und unter „Zuletzt verwendet“.
 
-  - „Zuletzt verwendet“ klappt auf und zu, und die Zeile „Offline“ schiebt sich herein und hinaus.
-
-  - Die Kamera blitzt beim Auslösen kurz auf.
-
-  - Zwischen Artikeldetails und „Symbol ändern“ wächst und schrumpft das Blatt weich.
+  - Über dem Listennamen ist etwas mehr Platz.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
