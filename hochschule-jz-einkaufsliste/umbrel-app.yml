@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.17"
+version: "0.1.18"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -28,10 +28,8 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - Jedes Foto lässt sich nach dem Aufnehmen zuschneiden: An den Ecken und Kanten des Rahmens ziehen, bis nur mehr das Wichtige drin ist, dann „Verwenden“. Der Rahmen kann jede Form haben, Fotos müssen nicht mehr quadratisch sein.
+  - Jeder Artikel im Katalog hat jetzt sein eigenes Symbol. 284 neue sind dazugekommen; bisher haben diese Artikel das Symbol ihrer Kategorie gezeigt, Steak und Kotelett zum Beispiel haben gleich ausgesehen.
 
-  - Die Kamera in der App zeigt das ganze Bild statt eines quadratischen Ausschnitts.
-
-  - In den Details ist das Foto immer ganz zu sehen.
+  - In der Liste, in der Suche und im Katalog erkennst du damit auf einen Blick, was gemeint ist.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
