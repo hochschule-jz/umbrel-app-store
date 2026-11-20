@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.16"
+version: "0.1.17"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
