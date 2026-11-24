@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.19"
+version: "0.1.20"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -28,8 +28,8 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - Die Artikeldetails sind niedriger: Sie nehmen höchstens 60 % des Bildschirms ein, damit du den Griff oben leichter erreichst und sie nach unten wegziehen kannst.
+  - „Foto hinzufügen“ öffnet am iPhone jetzt die Kamera des iPhones, wenn du die App vom Home-Bildschirm startest. Damit fragt die App nicht mehr bei jedem Start, ob sie die Kamera verwenden darf.
 
-  - Kategorie und „Verschieben nach“ findest du, wenn du in den Details ein Stück nach unten scrollst.
+  - Das Foto schneidest du danach wie gewohnt zu.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store
