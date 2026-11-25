@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.21"
+version: "0.1.22"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -28,8 +28,10 @@ releaseNotes: >-
   Neu in dieser Version:
 
 
-  - Ein Foto kannst du jetzt auch aus den Fotos auf deinem Gerät nehmen: In den Artikeldetails stehen unter „Foto“ zwei Knöpfe nebeneinander, „Aufnehmen“ und „Auswählen“.
+  - Siri versteht jetzt, was du sagst: „Milch Eier und zwei Liter Hafermilch“ werden drei Artikel, die Menge steht in der Notiz. Siri sagt dir danach, was auf der Liste steht.
 
-  - Ein ausgewähltes Foto schneidest du wie ein aufgenommenes zu. Mit „Anderes Foto wählen“ suchst du dir dort ein anderes aus.
+  - Den Kurzbefehl gibt es fertig: unter Einstellungen › Siri-Kurzbefehl die Adresse kopieren, „Kurzbefehl laden“ antippen und die Adresse einfügen. Er heißt „Einkaufszettel“. Dein alter Kurzbefehl funktioniert weiter.
+
+  - „Foto hinzufügen“ öffnet die Auswahl deines Geräts: Fotomediathek, Kamera oder Dateien. Die eigene Kamera der App gibt es nicht mehr.
 submitter: Privat
 submission: https://github.com/hochschule-jz/umbrel-app-store

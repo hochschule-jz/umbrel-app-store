@@ -62,7 +62,7 @@ for the Umbrel's Tailscale address (shown in the Tailscale app).
    ```
 
 7. **Phones.** Open `https://einkauf.example.eu:40443`, sign in, add it to the Home Screen and delete an
-   older icon. In the Siri shortcut use `https://einkauf.example.eu:40443/api/siri`. Turn on
+   older icon. Set up the Siri shortcut from there (Einstellungen › Siri-Kurzbefehl), so it gets this address. Turn on
    „VPN On Demand“ in the Tailscale app, so the phone stays connected away from home.
 
 ### B: Tailscale Serve (no domain needed)
