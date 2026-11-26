@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hochschule-jz-einkaufsliste
 category: files
 name: Einkaufsliste
-version: "0.1.22"
+version: "0.1.23"
 tagline: Die gemeinsame Einkaufsliste für euren Haushalt
 description: >-
   Eine Einkaufsliste für einen Haushalt: Artikel als Kacheln antippen, im Geschäft abhaken,
@@ -27,6 +27,8 @@ defaultPassword: ""
 releaseNotes: >-
   Neu in dieser Version:
 
+
+  - „Kurzbefehl laden“ funktioniert jetzt in Safari: Die Datei heißt „Einkaufszettel.shortcut“ und öffnet sich in „Kurzbefehle“. Bisher wurde sie als „.shortcut.html“ gespeichert.
 
   - Siri versteht jetzt, was du sagst: „Milch Eier und zwei Liter Hafermilch“ werden drei Artikel, die Menge steht in der Notiz. Siri sagt dir danach, was auf der Liste steht.
 
